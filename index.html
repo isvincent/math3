@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="線性規劃互動學習網：平行直線系、二元一次不等式、線性規劃（平行線法、頂點法），含互動實驗室、練習、測驗與學習歷程。">
+  <meta name="theme-color" content="#f4f7ff">
+  <title>線性規劃｜互動學習網</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b6cff'/%3E%3Cpolygon points='12,52 40,52 50,30 30,14 12,22' fill='%23ffe680'/%3E%3Cline x1='6' y1='58' x2='46' y2='8' stroke='%23ff3d7f' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="線性規劃 首頁">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="16" fill="url(#lg)"/>
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b6cff"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs>
+          <polygon points="12,52 40,52 50,30 30,14 12,22" fill="#ffe680"/>
+          <line x1="6" y1="58" x2="46" y2="8" stroke="#fff" stroke-width="4" stroke-dasharray="6 4"/>
+          <circle cx="50" cy="30" r="5" fill="#ff3d7f"/>
+        </svg>
+        <span><h1 data-i18n="title">線性規劃</h1><small data-i18n="subtitle">互動學習網</small></span>
+      </a>
+      <div class="ring" title="學習進度" aria-label="學習進度">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="none" stroke="var(--line)" stroke-width="5"/>
+          <circle id="ringArc" cx="24" cy="24" r="20" fill="none" stroke="url(#rg)" stroke-width="5" stroke-linecap="round" stroke-dasharray="125.6" stroke-dashoffset="125.6" style="transition:stroke-dashoffset .6s"/>
+          <defs><linearGradient id="rg"><stop offset="0" stop-color="#16a34a"/><stop offset="1" stop-color="#3b6cff"/></linearGradient></defs></svg>
+        <b id="ringTxt">0%</b>
+      </div>
+      <a class="icon-btn" href="assets/pdf/linear-programming.pdf" download="linear-programming.pdf" data-pdf title="下載原始教材 PDF" aria-label="下載原始教材 PDF">📄</a>
+      <button class="icon-btn" id="btnSet" type="button" title="顯示與操作設定" aria-label="顯示與操作設定" aria-controls="panel">⚙️</button>
+    </header>
+
+    <nav class="tabs" id="tabs" role="tablist" aria-label="主選單"></nav>
+
+    <main>
+      <section class="page" id="home" aria-label="學習指引"></section>
+      <section class="page" id="learn" aria-label="課程內容"></section>
+      <section class="page" id="lab" aria-label="互動實驗室"></section>
+      <section class="page" id="examples" aria-label="範例與習題"></section>
+      <section class="page" id="advanced" aria-label="進階延伸"></section>
+      <section class="page" id="practice" aria-label="練習"></section>
+      <section class="page" id="quiz" aria-label="測驗"></section>
+      <section class="page" id="record" aria-label="學習歷程"></section>
+    </main>
+
+    <footer>
+      📐 線性規劃互動學習網 · Linear Programming Interactive Learning<br>
+      內容依據教材〈第 1 章 線性規劃〉製作；標示「教學補充」者為本網站額外說明。
+      <br><a href="assets/pdf/linear-programming.pdf" download="linear-programming.pdf" data-pdf>⬇️ 下載原始教材 PDF</a>
+    </footer>
+  </div>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="setTitle" aria-hidden="true">
+    <h2><span id="setTitle">⚙️ 顯示與操作設定</span><button class="icon-btn" id="setClose" type="button" aria-label="關閉">✕</button></h2>
+    <div id="setBody"></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><p style="padding:20px;font-size:20px">本網站需要啟用 JavaScript。</p></noscript>
+  <script src="assets/js/plot.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
